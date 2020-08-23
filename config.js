@@ -27,7 +27,7 @@ const config = {
     forcedNavOrder: [
     ],
     collapsedNav: [
-      "Articulos"
+      
     ],
     links: [{ text: 'trifenix', link: 'https://www.trifenix.io' }],
     frontline: true,
@@ -39,7 +39,7 @@ const config = {
     title: 'Arquitectura de software - Desarrollo Web',
     description: 'Cursos de la universidad de valparaiso',
     ogImage: null,
-    docsLocation: 'https://github.com/trifenix/wiki-uv',
+    docsLocation: 'https://github.com/trifenix/wiki-uv/blob/wikiMaster',
     favicon: 'https://www.uv.cl/favicon.ico',
   },
   pwa: {
