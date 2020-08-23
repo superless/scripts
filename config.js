@@ -33,7 +33,7 @@ const config = {
     frontline: true,
     ignoreIndex: true,
     title:
-      "Documentación Universidad de valparaiso",
+      "Docs",
   },
   siteMetadata: {
     title: 'Arquitectura de software - Desarrollo Web',
