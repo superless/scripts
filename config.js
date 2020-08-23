@@ -43,9 +43,9 @@ const config = {
     favicon: 'https://www.uv.cl/favicon.ico',
   },
   pwa: {
-    enabled: false, // disabling this will also remove the existing service worker.
+    enabled: true, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Documentación de la universidad de valparaiso',
+      name: 'Docs de la universidad de valparaiso',
       short_name: 'valpo-docs',
       start_url: '/',
       background_color: '#6b37bf',
