@@ -6,7 +6,7 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo: 'https://www.uv.cl/universidad/descargas/archivos/uv_logo_alta_rgb.jpg',
+    logo: 'https://www.uv.cl/images/menu_marca_mono.png',
     logoLink: 'http://www.uv.cl',
     title:
       "Documentos de clases de Desarrollo Web y Arquitectura Web",
