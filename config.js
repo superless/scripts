@@ -2,12 +2,12 @@ const config = {
   gatsby: {
     pathPrefix: '/',
     siteUrl: 'https://#{site}#',
-    gaTrackingId: null,
+    gaTrackingId: "#{ga}#",
     trailingSlash: false,
   },
   header: {
     logo: 'https://www.uv.cl/images/menu_marca_mono.png',
-    logoLink: 'http://www.uv.cl',
+    logoLink: 'https://#{site}#',
     title:
       "Documentos de clases de Desarrollo Web y Arquitectura Web",
     githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
