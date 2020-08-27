@@ -4,6 +4,7 @@ const config = require("./config");
 const plugins = [
   'gatsby-plugin-sitemap',
   'gatsby-plugin-sharp',
+  `@pauliescanlon/gatsby-mdx-embed`,
   {
     resolve: `gatsby-plugin-layout`,
     options: {
