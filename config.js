@@ -39,7 +39,7 @@ const config = {
     title: 'Arquitectura de software - Desarrollo Web',
     description: 'Cursos de la universidad de valparaiso',
     ogImage: null,
-    docsLocation: 'https://github.com/trifenix/wiki-uv/blob/wikiMaster',
+    docsLocation: 'https://github.com/trifenix/wiki-uv/blob/draft',
     favicon: 'https://www.uv.cl/favicon.ico',
   },
   pwa: {
