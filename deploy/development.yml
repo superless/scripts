@@ -5,26 +5,26 @@ trigger:
         - release/*
   
 pool:
-vmImage: "ubuntu-latest"
+  vmImage: "ubuntu-latest"
 
 steps:
-- task: gitversion/setup@0
+  - task: gitversion/setup@0
     inputs:
-    versionSpec: '5.1'
-    includePrerelease: true
+      versionSpec: '5.1'
+      includePrerelease: true
     displayName : "Configurando gitversion"
 
-- task: gitversion/execute@0
+  - task: gitversion/execute@0
     inputs:
-    useConfigFile: false
+      useConfigFile: false
     displayName: "generando la nueva versión"
 
-- task: Docker@2
+  - task: Docker@2
     inputs:
-    containerRegistry: 'docker trifenix'
-    repository: 'trifenix/doc-site'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
-    tag : "$(GitVersion.MajorMinorPatch)$(GitVersion.PreReleaseTagWithDash).build.$(Build.BuildId)"
+      containerRegistry: 'docker trifenix'
+      repository: 'trifenix/doc-site'
+      command: 'buildAndPush'
+      Dockerfile: '**/Dockerfile'
+      tags : "$(GitVersion.MajorMinorPatch)$(GitVersion.PreReleaseTagWithDash).build.$(Build.BuildId)"
 
     
