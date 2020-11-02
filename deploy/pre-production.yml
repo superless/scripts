@@ -1,29 +1,29 @@
 trigger:
     branches:
       include:
-        - hotfix/*
+        -hotfix/*
   
-  pool:
-    vmImage: "ubuntu-latest"
-  
-  steps:
-    - task: gitversion/setup@0
-      inputs:
-        versionSpec: '5.1'
-        includePrerelease: true
-      displayName : "Configurando gitversion"
+pool:
+  vmImage: "ubuntu-latest"
 
-    - task: gitversion/execute@0
-      inputs:
-        useConfigFile: false
-      displayName: "generando la nueva versión"
-  
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'docker trifenix'
-        repository: 'trifenix/doc-site'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-        tag : "$(GitVersion.MajorMinorPatch)$(GitVersion.PreReleaseTagWithDash).build.$(Build.BuildId)"
+steps:
+  - task: gitversion/setup@0
+    inputs:
+      versionSpec: '5.1'
+      includePrerelease: true
+    displayName : "Configurando gitversion"
+
+  - task: gitversion/execute@0
+    inputs:
+      useConfigFile: false
+    displayName: "generando la nueva versión"
+
+  - task: Docker@2
+    inputs:
+      containerRegistry: 'docker trifenix'
+      repository: 'trifenix/doc-site'
+      command: 'buildAndPush'
+      Dockerfile: '**/Dockerfile'
+      tags : "$(MajorMinorPatch)$(PreReleaseTagWithDash).build.$(Build.BuildId)"
 
     
