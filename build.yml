@@ -17,3 +17,8 @@ steps:
     repository: 'trifenix/doc-site'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    
+
+    
+  
+    
