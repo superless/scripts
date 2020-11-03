@@ -25,6 +25,6 @@ steps:
       repository: 'trifenix/doc-site'
       command: 'buildAndPush'
       Dockerfile: '**/Dockerfile'
-      tags : "$(MajorMinorPatch)$(PreReleaseTagWithDash).build.$(Build.BuildId)"
+      tags : "$(MajorMinorPatch)$(PreReleaseTagWithDash)"
 
     
