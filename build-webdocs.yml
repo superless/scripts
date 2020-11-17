@@ -29,6 +29,10 @@ steps:
     useLegacyPattern: false
     enableTelemetry: false
 
+- script: |   
+    cat config.js
+  displayName: 'mostrando config.js'
+
 #instalando gatsby
 - script: |   
     npm install -g gatsby-cli
