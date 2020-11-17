@@ -1,5 +1,13 @@
 
+const jsn = require("./package.json")
 
+const searchSupported = "#{search-supported}#"=="true";
+
+const pwaSupported = "#{pwa-supported}#"=="true";
+
+const linkHeaders = JSON.parse("#{links-header}#") | [];
+
+const sideBarLinks = JSON.parse("#{links-sidebar}#") | [];
 
 const config = {
   gatsby: {
@@ -17,9 +25,9 @@ const config = {
     helpUrl: '#{help-url}#',
     tweetText: '#{tweet-text}#',
     social: ``,
-    links: [{ text: '', link: '' }],
+    links: linkHeaders,
     search: {
-      enabled: true,
+      enabled: searchSupported,
       indexName: '#{indexName}#',
       algoliaAppId: "#{algoliaAppId}#",
       algoliaSearchKey: "#{algoliaSearchKey}#",
@@ -32,11 +40,11 @@ const config = {
     collapsedNav: [
       
     ],
-    links: [{ text: 'trifenix', link: 'https://www.trifenix.io' }],
+    links: sideBarLinks,
     frontline: true,
     ignoreIndex: true,
     title:
-      "#{side-title}#",
+      `#{side-title}# - v : ${jsn.version}`,
   },
   siteMetadata: {
     title: '#{site-title-metadata}#',
@@ -46,7 +54,7 @@ const config = {
     favicon: '#{favicon}#',
   },
   pwa: {
-    enabled: true, // disabling this will also remove the existing service worker.
+    enabled: pwaSupported, // disabling this will also remove the existing service worker.
     manifest: {
       name: '#{manifest-name}#',
       short_name: '#{manifest-short-name}#',
