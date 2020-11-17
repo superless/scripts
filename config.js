@@ -1,4 +1,6 @@
 
+
+
 const config = {
   gatsby: {
     pathPrefix: '/',
@@ -7,13 +9,13 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo: 'https://www.uv.cl/images/menu_marca_mono.png',
+    logo: '#{logo-url}#',
     logoLink: 'https://#{site}#',
     title:
-      "Documentos de clases de Desarrollo Web y Arquitectura Web",
+      "#{title}#",
     githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
-    helpUrl: '',
-    tweetText: '',
+    helpUrl: '#{help-url}#',
+    tweetText: '#{tweet-text}#',
     social: ``,
     links: [{ text: '', link: '' }],
     search: {
@@ -34,28 +36,28 @@ const config = {
     frontline: true,
     ignoreIndex: true,
     title:
-      "Docs",
+      "#{side-title}#",
   },
   siteMetadata: {
-    title: 'Arquitectura de software - Desarrollo Web',
-    description: 'Cursos de la universidad de valparaiso',
+    title: '#{site-title-metadata}#',
+    description: '#{site-description-metadata}#',
     ogImage: null,
     docsLocation: '#{home-git}#',
-    favicon: 'https://www.uv.cl/favicon.ico',
+    favicon: '#{favicon}#',
   },
   pwa: {
     enabled: true, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Docs de la universidad de valparaiso',
-      short_name: 'valpo-docs',
+      name: '#{manifest-name}#',
+      short_name: '#{manifest-short-name}#',
       start_url: '/',
-      background_color: '#6b37bf',
-      theme_color: '#6b37bf',
+      background_color: '#{background-color}#',
+      theme_color: '#{theme-color}#',
       display: 'standalone',
       crossOrigin: 'use-credentials',
       icons: [
         {
-          src: 'src/pwa-512.png',
+          src: '#{src-icon-pwa}#',
           sizes: `512x512`,
           type: `image/png`,
         },
