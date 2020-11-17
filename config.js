@@ -5,9 +5,9 @@ const searchSupported = "#{search-supported}#"=="true";
 
 const pwaSupported = "#{pwa-supported}#"=="true";
 
-const linkHeaders = JSON.parse("#{links-header}#") | [];
+const linkHeaders = #{links-header}#;
 
-const sideBarLinks = JSON.parse("#{links-sidebar}#") | [];
+const sideBarLinks = #{links-sidebar}#;
 
 
 
