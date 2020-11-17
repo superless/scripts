@@ -9,6 +9,9 @@ const linkHeaders = JSON.parse("#{links-header}#") | [];
 
 const sideBarLinks = JSON.parse("#{links-sidebar}#") | [];
 
+
+
+
 const config = {
   gatsby: {
     pathPrefix: '/',
@@ -24,7 +27,7 @@ const config = {
     githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
     helpUrl: '#{help-url}#',
     tweetText: '#{tweet-text}#',
-    social: ``,
+    social: `#{html-social}#`,
     links: linkHeaders,
     search: {
       enabled: searchSupported,
