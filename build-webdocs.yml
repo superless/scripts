@@ -28,3 +28,51 @@ steps:
     tokenSuffix: '}#'
     useLegacyPattern: false
     enableTelemetry: false
+
+#instalando gatsby
+- script: |   
+    npm install -g gatsby-cli
+  displayName: 'instalando gatsby'
+#fin gatsby
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'npm install'
+    workingDirectory: '$(Build.SourcesDirectory)/web'
+  displayName: 'npm install'
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'npm install --save-dev @babel/plugin-proposal-export-default-from'
+    workingDirectory: '$(Build.SourcesDirectory)/web'
+  displayName: 'npm install babel'
+
+#gatsby build
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'gatsby build'
+    workingDirectory: '$(Build.SourcesDirectory)/web'
+  displayName: 'gatsby build'
+#fin gatsby build
+
+#copiando archivos a salida
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/web/public'
+    Contents: '**'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+    CleanTargetFolder: true
+#fin copiando archivos a salida
+
+#publicando artifacts
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: $(Build.ArtifactStagingDirectory)
+    ArtifactName: 'drop'
+    publishLocation: 'container'
+#fin publicando artifacts
+
+
