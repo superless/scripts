@@ -12,10 +12,19 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+    versionSpec: '11.x'
+  displayName: 'instalando node js'
+# fin nodejs
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+- task: replacetokens@3
+  inputs:
+    rootDirectory: '$(Build.SourcesDirectory)'
+    targetFiles: '**/config.js'
+    encoding: 'auto'
+    writeBOM: true
+    actionOnMissing: 'warn'
+    keepToken: false
+    tokenPrefix: '#{'
+    tokenSuffix: '}#'
+    useLegacyPattern: false
+    enableTelemetry: false
