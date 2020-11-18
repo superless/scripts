@@ -12,7 +12,6 @@
     "@mdx-js/loader": "^1.5.1",
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
-    "@pauliescanlon/gatsby-mdx-embed": "0.0.28",
     "@philpl/buble": "^0.19.7",
     "@playlyfe/gql": "^2.6.2",
     "algoliasearch": "^3.35.1",

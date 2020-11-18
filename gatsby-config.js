@@ -3,8 +3,7 @@ const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
   'gatsby-plugin-sitemap',
-  'gatsby-plugin-sharp',
-  `@pauliescanlon/gatsby-mdx-embed`,
+  'gatsby-plugin-sharp',  
   {
     resolve: `gatsby-plugin-layout`,
     options: {
