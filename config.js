@@ -4,9 +4,7 @@ const searchSupported = "#{search-supported}#"=="true";
 
 const pwaSupported = "#{pwa-supported}#"=="true";
 
-const linkHeaders = JSON.parse("#{links-header}#") | [];
 
-const sideBarLinks = JSON.parse("#{links-sidebar}#") | [];
 
 
 
@@ -26,8 +24,7 @@ const config = {
     githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
     helpUrl: '#{help-url}#',
     tweetText: '#{tweet-text}#',
-    social: `#{html-social}#`,
-    links: linkHeaders,
+    social: `#{html-social}#`,    
     search: {
       enabled: searchSupported,
       indexName: '#{indexName}#',
@@ -42,7 +39,7 @@ const config = {
     collapsedNav: [
       
     ],
-    links: sideBarLinks,
+    
     frontline: true,
     ignoreIndex: true,
     title:
