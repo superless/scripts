@@ -4,9 +4,15 @@ const searchSupported = "#{search-supported}#"=="true";
 
 const pwaSupported = "#{pwa-supported}#"=="true";
 
+const sideBarLinks = [{
+  text: 'trifenix',
+  link: 'https://www.trifenix.io'
+}];
 
-
-
+const linkHeaders = [{
+  text: 'trifenix',
+  link: 'https://www.trifenix.io'
+}];
 
 
 const config = {
@@ -24,7 +30,8 @@ const config = {
     githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
     helpUrl: '#{help-url}#',
     tweetText: '#{tweet-text}#',
-    social: `#{html-social}#`,    
+    social: `#{html-social}#`,
+    links: linkHeaders,
     search: {
       enabled: searchSupported,
       indexName: '#{indexName}#',
@@ -39,7 +46,7 @@ const config = {
     collapsedNav: [
       
     ],
-    
+    links: sideBarLinks,
     frontline: true,
     ignoreIndex: true,
     title:
