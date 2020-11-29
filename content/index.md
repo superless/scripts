@@ -1,11 +1,11 @@
 ---
-title: "Logos e íconos como recursos"
-metaTitle: "Logos iconos útiles usados en trifenix"
-metaDescription: "Todos los pull requests son bienvenidos"
+title: "Repositorio de imágenes de trifenix"
+metaTitle: "Repositorio de imágenes de trifenix"
+metaDescription: "Repositorio de imágenes de trifenix"
 ---
 # Íconos y logos para uso general
 
-En este repositorio o página se publicarán los logos e iconos que iremos utilizando en trifenix, esta abierto a quien quiera agregar su pull request.
+En este repositorio o página se publicarán las imágenes que se quiera agregar, para tener disponible como repositorio.
 
 
 
