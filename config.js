@@ -1,18 +1,12 @@
 const jsn = require("./package.json")
 
-const searchSupported = "true" == "true";
+const searchSupported = "#{search-supported}#"=="true";
 
-const pwaSupported = "true" == "true";
+const pwaSupported = "#{pwa-supported}#"=="true";
 
-const linkHeaders = [{
-  text: 'trifenix',
-  link: 'https://www.trifenix.io'
-}];
+const linkHeaders = JSON.parse("#{links-header}#") | [];
 
-const sideBarLinks = [{
-  text: 'trifenix',
-  link: 'https://www.trifenix.io'
-}];
+const sideBarLinks = JSON.parse("#{links-sidebar}#") | [];
 
 
 
@@ -20,59 +14,64 @@ const sideBarLinks = [{
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://logos.trifenix.cl',
-    gaTrackingId: "",
+    siteUrl: 'https://#{site}#',
+    gaTrackingId: "#{ga}#",
     trailingSlash: false,
   },
   header: {
-    logo: 'logo1.png',
-    logoLink: 'https://logos.trifenix.cl',
-    title: "Logos e iconos",
+    logo: '#{logo-url}#',
+    logoLink: 'https://#{site}#',
+    title:
+      "#{title}#",
     githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
-    helpUrl: '',
-    tweetText: 'ayudanos con tus pull request ',
-    social: ``,
+    helpUrl: '#{help-url}#',
+    tweetText: '#{tweet-text}#',
+    social: `#{html-social}#`,
     links: linkHeaders,
     search: {
       enabled: searchSupported,
-      indexName: 'logos',
-      algoliaAppId: "FZD56GX53Y",
-      algoliaSearchKey: "70e2b920cc9e222045bd1586f9c976bb",
-      algoliaAdminKey: "1864994855ac95c74980fedfa024486b",
+      indexName: '#{indexName}#',
+      algoliaAppId: "#{algoliaAppId}#",
+      algoliaSearchKey: "#{algoliaSearchKey}#",
+      algoliaAdminKey: "#{algoliaAdminKey}#",
     },
   },
   sidebar: {
-    forcedNavOrder: [],
+    forcedNavOrder: [
+    ],
     collapsedNav: [
-
+      
     ],
     links: sideBarLinks,
     frontline: true,
     ignoreIndex: true,
-    title: `Logos e iconos como recursos. - v : ${jsn.version}`,
+    title:
+      `#{side-title}# - v : ${jsn.version}`,
   },
   siteMetadata: {
-    title: 'Logos e iconos para trifenix',
-    description: 'logos e iconos como material de apoyo',
+    title: '#{site-title-metadata}#',
+    description: '#{site-description-metadata}#',
     ogImage: null,
-    docsLocation: 'https://github.com/trifenix/logos/blob/main',
-    favicon: 'logo2.ico',
+    docsLocation: '#{home-git}#',
+    favicon: '#{favicon}#',
   },
   pwa: {
     enabled: pwaSupported, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Logos trifenix',
-      short_name: 'logos',
+      name: '#{manifest-name}#',
+      short_name: '#{manifest-short-name}#',
       start_url: '/',
-      background_color: '#FF0000',
-      theme_color: '#FF0000',
+      background_color: '#{background-color}#',
+      theme_color: '#{theme-color}#',
       display: 'standalone',
       crossOrigin: 'use-credentials',
-      icons: [{
-        src: 'logo1.png',
-        sizes: `512x512`,
-        type: `image/png`,
-      }, ],
+      icons: [
+        {
+          src: '#{src-icon-pwa}#',
+          sizes: `512x512`,
+          type: `image/png`,
+        },
+      ],
     },
   },
 };
